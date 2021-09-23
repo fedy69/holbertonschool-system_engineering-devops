@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chgrp betty hello
+chown betty hello
