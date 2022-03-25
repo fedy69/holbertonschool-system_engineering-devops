@@ -1,1 +1,22 @@
 https://imgur.com/a/C29NzvM
+
+A server is a computer or system that provides resources, data, services, or programs to other computers, known as clients, over a network. In theory, whenever computers share resources with client machines they are considered servers
+
+
+
+Web server in its hardware form stores the html, java, css, image,
+        it also stores web server software. The web server software controls
+        how websites are accessed. This is done with the help of HTTP server,
+        that understand URL and HTTP requests, to deliver us a static webpage.
+        5. Application Server handles the business logic. This means it will
+        transform the data to provide special functions, to make the webpage
+        interactive with the user. It is an intermediate between the webserver
+        and database. It reduces the complex interaction between webserver and
+        database, by storing previous interactions, giving better performance,
+        better management.
+
+
+ Database is a way to store information in an organized manner so
+        that it can be easily accessed, updated and utilized.
+        6. The server uses IP address to communicate with the client using
+        protocols like TCP\IP, HTTP.       
