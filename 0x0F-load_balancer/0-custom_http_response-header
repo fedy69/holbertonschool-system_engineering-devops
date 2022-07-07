@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-# Configure Nginx 
-sudo apt-get update -y && sudo apt-get upgrade -y
-sudo apt-get install -y nginx
-sudo chown -R "$USER":"$USER" /var/www/
-sudo chown -R "$USER":"$USER" /etc/nginx
+# Configure Nginx server
+apt-get -y update
+apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
-sudo sed -i "/http {/a add_header X-Served-By ${HOSTNAME};" /etc/nginx/nginx.conf
-sudo service nginx reload
-sudo service nginx start
+new_string="server_name _;\n\tadd_header X-Served-By $HOSTNAME;"
+sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-available/default
+service nginx restart
