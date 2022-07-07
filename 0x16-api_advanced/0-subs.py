@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-reddit api  that returns the number of subscribers
+reddit api that returns the number of subscribers
 """
 import requests
 
