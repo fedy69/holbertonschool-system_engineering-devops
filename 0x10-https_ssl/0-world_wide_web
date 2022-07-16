@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# script that Configure your domain zone so that the subdomain www points to your load-balancer IP (lb-01).
+# write a Bash script that will display information about subdomains.
+
+function print_info(){
+    dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf "The subdomain %s is a %s record and points to %s\n", var, $4, $5}' var="$SUBDOMAIN"
+}
+
+for SUBDOMAIN in "www" "lb-01" "web-01" "web-02"
+do
+    if [ -z "$2" ] || [ "$2" == "$SUBDOMAIN" ]; then
+        print_info "$1" "$SUBDOMAIN"
+    fi
+done
