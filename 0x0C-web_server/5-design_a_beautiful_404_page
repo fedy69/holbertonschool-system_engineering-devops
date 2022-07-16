@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+  <title>404 Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #vanta-canvas {
+      margin: 0;
+      height: 100vh;
+      position: relative;
+    }
+
+    .error-msg {
+      font-family: 'Style Script', cursive;
+      position: absolute;
+      z-index: 1;
+      color: white;
+      left: 50%;
+      top: 35%;
+      transform: translate(-50%, -50%);
+      font-size: 4rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px white;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="error-msg">Ceci n'est pas une page</p>
+  <div id="vanta-canvas"></div>
+
+  <script>
+    VANTA.BIRDS({
+      el: "#vanta-canvas",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      </script>
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 2.00,
+      birdSize: 1.60,
+      wingSpan: 27.00,
+      alignment: 33.00
+    })
+  </script>
+
+</body>
+
+</html> 
